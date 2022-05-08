@@ -13,9 +13,9 @@
 # print(spisok_x)
 
 #3
-data = int(input("введите номер месяц в цыфре от 1 до 12:"))
-monthes = [None, "winter", "winter", "spring", "spring", "spring", "summer", "summer", "summer", "autumn", "autumn", "autumn", "winter"]
-print(monthes[data])
+# data = int(input("введите номер месяц в цыфре от 1 до 12:"))
+# monthes = [None, "winter", "winter", "spring", "spring", "spring", "summer", "summer", "summer", "autumn", "autumn", "autumn", "winter"]
+# print(monthes[data])
 
 
 
@@ -23,3 +23,28 @@ print(monthes[data])
 #          9: "autumn", 10: "autumn", 11: "autumn", 12: "winter"}
 # mesyats = int(input("введите ваш месяц в цыфре от 1 до 12:\n"))
 # print(month[mesyats])
+
+#4
+# words = input("введите список чего хотите")
+# spisok = words.split()
+# for index, el in enumerate(spisok):
+#     print(index, el[:10])
+
+#5
+my_list = [9, 7, 5, 3]
+number = int(input("введите число что бы оно хорошо встало в мой список "))
+if number > my_list[0]:
+    my_list.insert(0, number)
+elif number == my_list[0]:
+    my_list.insert(1, number)
+elif number < my_list[-1]:
+    my_list.append(number)
+else:
+    for index, el in enumerate(my_list):
+        if number > el:
+            my_list.insert(index, number)
+            break
+        if number == el:
+            my_list.insert(index+1, number)
+            break
+print(my_list)
